@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior:smooth
+        }
+        body{
+            background-color: #000;
+        }
+        #a{
+            background-color: #000;
+        }
+        #b{
+            background-color:burlywood;
+        }
+
+
+        .box{
+            display:flex;
+            min-height:100vh;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            flex-direction: column;
+            gap: 8px;
+        }
+        button{
+            padding: 8px 16px;
+        }
+        .text{
+            font-size: 54px;
+            color:aquamarine;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .winner{
+            color: orangered;
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="a">
+    <h1 class="text">Lumbini Lions vs Biratnagar Kings</h1>
+    <button><a href="#b">Result</a></button>
+    </div>
+     <div class="box" id="b">     
+
+
+
+
+    <h1 class="text">Winner</h1>
+    <h2 class="winner">Lumbini Lions</h2>
+        <button><a href="#a">Back</a></button>
+
+    </div>
+</body>
+</html>

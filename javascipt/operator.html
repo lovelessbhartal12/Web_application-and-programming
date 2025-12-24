@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = 5;
+      let num2 = "5";
+      console.log(num1 == num2);
+      console.log(typeof num1);
+      console.log(typeof num2);
+
+      const nums = [10, 20, 40, 30, 50];
+      const nums1 = [60, 40, 39];
+      const nums3 = [...nums, ...nums1, 100, 20];
+      console.log(nums3);
+      const nums2 = [...nums];
+
+      nums2[2] = 300;
+      console.log(nums, nums2);
+
+      const person = {
+        name: "loblesh",
+        age: 21,
+      };
+
+      const address = {
+        city: "gulmi",
+      };
+
+      const person2 = person;
+
+      person2.age = 23;
+
+      console.log(person, person2);
+
+      const person3 = { ...person, adress: "gulmi", ...address };
+      person3.age = 3;
+      console.log(person3);
+      const anynumbs = [10, 20, 30, 50];
+
+      function addanynumbers(...nums) {
+        let total = 0;
+        for (let n of nums) {
+          total += n;
+        }
+        return total;
+      }
+      console.log(addanynumbers(1, 2));
+      console.log(addanynumbers(2, 3, 4, 2));
+      console.log(addanynumbers(...anynumbs));
+
+      let str = "hello";
+      const splitted = [...str];
+      console.log(splitted);
+    </script>
+  </body>
+</html>

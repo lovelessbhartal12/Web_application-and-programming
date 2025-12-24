@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="(function() { alert('clicked')})()">click me</button>
+    <script>
+      //   const numbers = [15, 3, 22, 7, 8, 18, 4, 1];
+      //   let smallest = numbers[0];
+      //   let largest = numbers[0];
+      //   for (nums of numbers) {
+      //     if (nums > largest) {
+      //       largest = nums;
+      //     } else {
+      //       smallest = nums;
+      //     }
+      //   }
+      //   console.log(largest);
+      //   console.log(smallest);
+      function add(a, b) {
+        return a + b;
+      }
+      const mult = function (a, b) {
+        return a * b;
+      };
+      console.log(add(3, 4));
+      console.log(mult(2, 3));
+
+      const two = (x) => 2;
+
+      const complex = (a, b) => {
+        const sum = a + b;
+        return sum;
+      };
+      console.log(complex(2, 3));
+      const complex1 = () => ({ name: "loveless", age: 21 });
+      console.log(complex1());
+    </script>
+  </body>
+</html>

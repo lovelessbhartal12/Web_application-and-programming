@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class vechicle {
+        #id;
+        _engine;
+        _color;
+
+        constructor(engine, color) {
+          this.#id = Math.random();
+
+          this._engine = engine;
+          this._color = color;
+        }
+        start() {
+          console.log(
+            `${this.#id} vechile started with the color ${
+              this._color
+            } and engine ${this._engine}`
+          );
+        }
+      }
+
+      const vechicle1 = new vechicle("v8", "black");
+      vechicle1.start();
+      console.log(vechicle1);
+
+      //   class car extends vechicle {
+      //     constructor(engine, color) {
+      //       super(engine, color);
+      //       this.door = 4;
+      //     }
+      //     start() {
+      //       console.log(thsi.door);
+      //       super.start();
+      //     }
+      //   }
+      //   const car = new car("v6", "red");
+      //   car1.start();
+
+      const person = new Object({
+        names: "loveless",
+        age: 21,
+      });
+      console.log(person);
+    </script>
+  </body>
+</html>

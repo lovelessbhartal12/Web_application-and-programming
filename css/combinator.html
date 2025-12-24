@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #Text1 {
+        background: greenyellow;
+      }
+      #Text1 + p {
+        background: red;
+      }
+      #Text1 ~ p {
+        background: blue;
+      }
+      #parent > p {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="Text1">text1</p>
+    <p>Text1</p>
+    <p>text2</p>
+    <p>tect3</p>
+    <div id="parent">
+      <p>text4</p>
+      <div>
+        <p>text5</p>
+      </div>
+      <p>text6</p>
+    </div>
+  </body>
+</html>

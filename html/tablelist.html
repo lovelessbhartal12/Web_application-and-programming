@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table_list</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        border-color: violet;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      ol,
+      ul,
+      li {
+        list-style-position: inside;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <table>
+        <caption>
+          student tablelist
+        </caption>
+        <thead>
+          <tr>
+            <td>Drinks</td>
+            <td>Snacks</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ol>
+                <li>coke</li>
+                <li>sprit</li>
+              </ol>
+            </td>
+            <td>momo</td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>milk</li>
+                <li>coffe</li>
+              </ul>
+            </td>
+            <td>chowmin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

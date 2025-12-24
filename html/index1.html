@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first html page</title>
+  </head>
+  <body>
+    <button onclick="console.log('button clicked')">submit</button>
+    <!-- this is the noscipt file -->
+    <noscript>
+      <p>please enable the javascript</p>
+    </noscript>
+    <script>
+      const num1 = 50;
+      const num2 = 50.5;
+
+      const name = "loblesh";
+      const isactive = true;
+      let aalu;
+      console.log(aalu);
+      const data = null;
+      const sym1 = Symbol("key");
+      const sym2 = Symbol("key");
+      console.log(sym1 == sym2);
+
+      console.log(1 == "1");
+      console.log(1 === "1");
+
+      const person = {
+        name: "loblesh bhartal",
+        age: 21,
+        istudent: true,
+        updateage: function (newage) {
+          this.age = newage;
+        },
+      };
+      console.log(person);
+      person.updateage(23);
+      console.log(person);
+      console.log(person.age);
+      console.log(person["age"]);
+
+      for (let key in person) {
+        console.log(key + " :", +person[key]);
+
+        let arr = [10, "loveless", true, null, undefined];
+        console.log(arr);
+      }
+
+      function add(a, b) {
+        return a + b;
+      }
+
+      console.log(add(10, 20));
+      add.description = "this function adds two number";
+      console.log(add.description);
+
+      function Employee(name, position) {
+        this.name = name;
+        this.position = position;
+      }
+
+      const emp1 = new Employee("loveless", "developer");
+      console.log(emp1.position);
+
+      const numbers = [20, 20, 40, 5, 44];
+      const [firstvalue, secondvalue, ...restvalue] = numbers;
+      console.log(firstvalue, secondvalue, restvalue);
+
+      const college = {
+        collegename: "NCE",
+        location1: "lalitpur",
+        course: "engineering",
+      };
+
+      const { collegename, location1, course } = college;
+      console.log(collegename, location1, course);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
