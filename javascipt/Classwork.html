@@ -11,8 +11,13 @@
       <input type="text " name="name" id="name" /><br></br>
       <label for="email">Email:</label>
       <input type="text" name="email" , id="email" /></br></br>
+      <label for="password">password:</label>
+      <input type="password" name="password" , id="password" /></br></br>
+      <label for="confirmpassord">confirmpassord:</label>
+      <input type="password" name="confirmpassord" , id="confirmpassord" /></br></br>
 
       <button type="sumnit">sumbit</button>
+      <p id="error" style="color:rebeccapurple; font-weight: 200; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></p>
     </form>
     <script>
         function handlesubmit(event){
@@ -21,6 +26,35 @@
             const formdata=new FormData(form);
             const name=formdata.get('name');
             const email=formdata.get('email');
+            // const error=getElementById("error")
+            error.textcontent="";
+            const password=formdata.get("password");
+            const confirmpassord=formdata.get("confirmpassword");
+
+
+            if(!name || !email){
+                // alert("ALL fileds are required");
+                document.getElementById("error").textContent="all fileds are required";
+                // error.textcontent="all fileds are required";
+                return;
+            }
+            if(!email.includes('@')){
+                document.getElementById("error").textContent="email is invalid";
+                // error.textcontent="email should be valid"
+                return;
+            }
+            if(password.len<8){
+                document.getElementById("error").textContent="password should be least 8 char";
+                return;
+            }
+
+            if(password!= confirmpassord){
+                document.getElementById("error").textContent="password should be same";
+                return;
+            }
+
+
+
             console.log(name ,email);
         }
     </script>
