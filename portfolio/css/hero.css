@@ -5,7 +5,11 @@
   justify-content: center;
   align-items: flex-start;
   padding: 0 30px;
-  background: rgb(187, 224, 239);
+  background: #efe7ec;
+  background-image: url("/portfolio/image/photo.jpg");
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #hero > h1 {
   font-size: 28px;
