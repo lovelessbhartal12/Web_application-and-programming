@@ -26,9 +26,24 @@
     <link rel="stylesheet" href="css/comman.css" />
     <link rel="stylesheet" href="css/skill.css"/>
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/sidebar.css">
   </head>
 
   <body>
+
+    <nav class="sidebar">
+      <i  id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
+      <div class="sidebar_content">
+        <ul class="sidebar_list">
+          <li>
+            <a href="#hero">Home</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <section id="hero">
       <h1>Hi! <br />I am loblesh<br />I am engineering student</h1>
       <p>Computer enginerring student</p>
@@ -45,6 +60,20 @@
 My journey into AI has taught me the value of continuous learning, patience, and the importance of understanding both the math and the code behind algorithms. I'm especially fascinated by the power of neural networks and how APIs like FastAPI can bridge machine learning models with real-world applications.
 
 I’m currently looking to collaborate, grow my skills, and contribute to meaningful projects where I can apply what I’m learning and keep pushing forward.</p>
+<div class="about_skills">
+  <div class="about_skills_box">
+    <i class="fa-solid fa-ear-listen"></i>
+    <h3>web design</h3>
+  </div>
+  <div class="about_skills_box">
+    <i class="fa-solid fa-mobile"></i>
+    <h3>NLP</h3>
+  </div>
+  <div class="about_skills_box">
+    <i class="fa-solid fa-database"></i>
+    <h3>Langchain</h3>
+  </div>
+</div>
 
 
 
@@ -131,5 +160,11 @@ I’m currently looking to collaborate, grow my skills, and contribute to meanin
         </div>
       </div>
     </section>
+    <script>
+      const hamburger=document.querySelector("#hamburger");
+      hamburger.addEventListener("click",()=>{
+      hamburger.classList.toggle("sidebar_hamburger_translate")})
+
+    </script>
   </body>
 </html>
