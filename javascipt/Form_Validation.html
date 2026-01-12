@@ -50,11 +50,14 @@
             const formdata=new FormData(form);
             const name=formdata.get('name');
             const email=formdata.get('email');
-            // const error=getElementById("error")
-            error.textcontent="";
+            // // const error=getElementById("error")
+            // error.textcontent="";
+            const gender=document.querySelector( 
+              "input[type='radio']:checked"
+            )?.value
             const password=formdata.get("password");
             const confirmpassord=formdata.get("confirmpassword");
-            const gender=formdata.get("gender");
+            // const gender=formdata.get("gender");
             console.log({gender});
             const hobbies=formdata.get("hobbies");
             const appointment=formdata.get("appointment");

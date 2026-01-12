@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>click me</button>
+    <script>
+      const button = document.querySelector("input");
+      button.addEventListener("click", (event) => {
+        console.log(event.clientX, event.clientY);
+        console.log(event.pageY);
+        console.loog(event.screenY);
+        console.log(event.type);
+      });
+
+      const input = document.querySelector("input");
+      input.addEventListener("keyup", (event) => {
+        console.log(event);
+        console.log(event.key);
+        console.log(typeof event);
+      });
+    </script>
+  </body>
+</html>
