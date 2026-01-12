@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br action="#" onsubmit="handlesubmit(event)" name="myform">
+      <label for="name">Name:</label>
+      <input type="text " name="name" id="name" /><br></br>
+      <label for="email">Email:</label>
+      <input type="text" name="email" , id="email" /></br></br>
+      <label for="password">password:</label>
+      <input type="password" name="password" , id="password" /></br></br>
+      <label for="confirmpassord">confirmpassord:</label>
+      <input type="password" name="confirmpassord" , id="confirmpassord" /></br></br>
+      <input type="radio" name="gender" id="gender" value="m">male &nbsp;
+      <input type="radio" name="gender" id="gender" value="f">female
+      <br/><br/>
+
+      <input type="checkbox" name="hobbies" id="hobbies" value="VOLLEYBALL">VOLLEYBALL
+      <input type="checkbox" name="hobbies#" id="hobbies" value="football">football
+      <br/><br/>
+
+      Appointment data:
+      <input type="datetime-local" name="appointment" id="appointment"/>
+      <br/><br/>
+
+      Country:
+      <select name="Country" id="Country">
+        <option value="">--select--</option>
+        <option value="nepal">Nepal</option>
+        <option value="inida">India</option>
+        <option value="us">USA</option>
+      </select><br/><br/>
+    Resume:
+      <input type="file" name="resume" id="resume"/>
+      <br/><br/>
+
+
+
+      <button type="sumnit">sumbit</button>
+      <p id="error" style="color:rebeccapurple; font-weight: 200; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></p>
+    </form>
+    <script>
+        function handlesubmit(event){
+            event.preventDefault();
+            const form=document.forms["myform"]
+            const formdata=new FormData(form);
+            const name=formdata.get('name');
+            const email=formdata.get('email');
+            // const error=getElementById("error")
+            error.textcontent="";
+            const password=formdata.get("password");
+            const confirmpassord=formdata.get("confirmpassword");
+            const gender=formdata.get("gender");
+            console.log({gender});
+            const hobbies=formdata.get("hobbies");
+            const appointment=formdata.get("appointment");
+            const country=formdata.get("country");
+            const resume=formdata.get("resume");
+
+            const now=new Date();
+
+            const appointmentData=new Date(appointment);
+            const maxsize=2*1024*1024;
+
+            if(resume.size> maxsize){
+             alert()
+
+             }
+
+            if(appointment< now)
+            {
+              alert("appointment data canot be in past");
+            return;
+            }
+
+
+
+
+            if(!name || !email){
+                // alert("ALL fileds are required");
+                document.getElementById("error").textContent="all fileds are required";
+                // error.textcontent="all fileds are required";
+                return;
+            }
+            if(!email.includes('@')){
+                document.getElementById("error").textContent="email is invalid";
+                // error.textcontent="email should be valid"
+                return;
+            }
+            if(password.len<8){
+                document.getElementById("error").textContent="password should be least 8 char";
+                return;
+            }
+
+            if(password!= confirmpassord){
+                document.getElementById("error").textContent="password should be same";
+                return;
+            }
+            if(!gender){
+              alert("all filed are required");
+            }
+            if((!gender || !hobbies.length || !appointment || !country || !resume.name))
+              alert("all filed are requiored")
+              return;
+            
+
+            
+
+
+
+
+            console.log(name ,email);
+        }
+    </script>
+  </body>
+</html>
