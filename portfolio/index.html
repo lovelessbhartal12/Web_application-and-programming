@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/skill.css"/>
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/contact.css">
   </head>
 
   <body>
@@ -39,7 +40,13 @@
             <a href="#hero">Home</a>
           </li>
           <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
             <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -160,10 +167,42 @@ I’m currently looking to collaborate, grow my skills, and contribute to meanin
         </div>
       </div>
     </section>
+    <!-- contact section -->
+     <section id="contact" class="section">
+  <span class="section__title">get in touch</span>
+  <h2 class="section__subtitle">contact</h2>
+
+  <form
+    action=""
+    id="contactForm"
+    class="contact__form"
+    onsubmit="submitForm(event);"
+  >
+    <input
+      type="text"
+      placeholder="Name"
+      id="name"
+      name="name"
+      class="contact__input"
+    />
+    <input type="email" name="email" id="email" class="contact_email" placeholder="Email">
+    <input type="text" name="subject" id="subject" class="contact_subject" placeholder="subject">
+    <textarea
+      id="message"
+      class="contact__textarea"
+      name="message"
+      placeholder="Message"
+      rows="4"
+    ></textarea>
+    <button class="contact__button" type="submit">Send Message</button>
+  </form>
+</section>
     <script>
       const hamburger=document.querySelector("#hamburger");
       hamburger.addEventListener("click",()=>{
       hamburger.classList.toggle("sidebar_hamburger_translate")})
+
+      
 
     </script>
   </body>
