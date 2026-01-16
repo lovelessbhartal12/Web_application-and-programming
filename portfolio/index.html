@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/comman.css" />
@@ -28,6 +29,8 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/workcount.css">
   </head>
 
   <body>
@@ -36,7 +39,7 @@
       <i  id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
       <div class="sidebar_content">
         <div class="sidebar_image">
-          <img src="image\img.jpg" alt="test">
+          <img src="image\lobless1.jpeg" alt="test">
 
             </div>
         <ul class="sidebar__list">
@@ -58,7 +61,7 @@
     <section id="hero">
       <h1>Hi! <br />I am loblesh<br />I am engineering student</h1>
       <p>Computer enginerring student</p>
-      <button>
+      <button >
         <span>Contact me</span>
         <i class="fa-regular fa-message"></i>
       </button>
@@ -171,6 +174,35 @@ I’m currently looking to collaborate, grow my skills, and contribute to meanin
         </div>
       </div>
     </section>
+    <section id="work-count" class="work-count-section">
+  <div class="container">
+    <h2>My GitHub Stats</h2>
+    <div class="counts">
+
+      <div class="count-box">
+        <h3 class="count-number" id="reposCount">20+</h3>
+        <p>Public Repositories</p>
+      </div>
+
+      <div class="count-box">
+        <h3 class="count-number" id="projectsCount">15+</h3>
+        <p>Projects Completed</p>
+      </div>
+
+      <div class="count-box">
+        <h3 class="count-number" id="followersCount">10+</h3>
+        <p>GitHub Followers</p>
+      </div>
+
+      <div class="count-box">
+        <h3 class="count-number" id="contribCount">500+</h3>
+        <p>Total Contributions</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     <!-- contact section -->
      <section id="contact" class="section">
   <span class="section__title">get in touch</span>
@@ -201,6 +233,24 @@ I’m currently looking to collaborate, grow my skills, and contribute to meanin
     <button class="contact__button" type="submit">Send Message</button>
   </form>
 </section>
+
+    <footer class="footer">
+        <h3>Follow Me</h3>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/loveless-bhartal-9ba97225b/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/lovelessbhartal12" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <!-- <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a> -->
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
+        <p class="copyright">
+            © 2026 loblesh bhartal. All rights reserved.
+        </p>
+    </footer>
+
     <script>
       const hamburger=document.querySelector("#hamburger");
       hamburger.addEventListener("click",()=>{

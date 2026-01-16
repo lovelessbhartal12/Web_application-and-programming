@@ -7,11 +7,16 @@
   </head>
   <body>
     <script>
-      console.log("start");
-      setTimeout(() => {
-        console.log("when");
-      }, 0);
-      console.log("stop");
+      function fetch_data(dataindentifier, getnextdata) {
+        setTimeout(() => {
+          console.log(`${dataindentifier}`);
+          if (getnextdata) getnextdata();
+        }, 2000);
+      }
+
+      fetch_data("user", () => {
+        fetch_data("posts");
+      });
     </script>
   </body>
 </html>

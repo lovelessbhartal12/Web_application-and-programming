@@ -6,7 +6,7 @@
   align-items: flex-start;
   padding: 0 30px;
   background: #efe7ec;
-  background-image: url("/portfolio/image/photo.jpg");
+  background-image: url("/portfolio/image/lovelessimg.png");
   background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -37,8 +37,26 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  animation: oscillate 0.5s ease-in-out infinite;
+  cursor: pointer;
 }
-
+@keyframes oscillate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 #hero > button > i {
   font-size: 15px;
 }

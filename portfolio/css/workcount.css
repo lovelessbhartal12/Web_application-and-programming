@@ -1,0 +1,36 @@
+/* Work Count Section */
+.work-count-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.work-count-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.counts {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.count-box {
+  width: 180px;
+}
+
+.count-number {
+  font-size: 36px;
+  color: rebeccapurple;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.count-box p {
+  font-size: 16px;
+  color: #555;
+}
