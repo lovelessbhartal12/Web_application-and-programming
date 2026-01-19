@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fetchData(dataIdentifier) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const error = Math.random() < 0.1;
+            if (error) {
+              reject(`Error fetching ${dataIdentifier}`);
+            } else {
+              resolve(`data of ${dataIdentifier}`);
+            }
+          }, 4000);
+        });
+      }
+
+      fetchData("user")
+        .then((res) => {
+          console.log(res);
+          return fetchData("post");
+        })
+        .then((res) => {
+          console.log(res);
+          return fetchData("comment");
+        })
+        .then((res) => {
+          console.log(res);
+          console.log("All data fetched successfully");
+        })
+        .catch((err) => {
+          console.error("Something went wrong");
+          console.error(err);
+        })
+        .finally(() => {
+          console.log("Request completed (success or failure)");
+        });
+      //   const all1 = fetchdata("user");
+      //   console.log(all1);
+      //   all1.then((res) => {
+      //     console.log(res);
+
+      //     all1.then((res) => {
+      //       console.log(res);
+      //       console.log("fwtching cpmments");
+      //       const p2 = fetchdata("comments");
+      //       console.log(p2);
+      //     });
+
+      //     p2.then((res) => {
+      //       console.log(res);
+      //       console.log("fwtching postss");
+      //       const p3 = fetchdata("posts");
+      //       console.log(p3);
+      //     });
+      //   });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fetchData(dataIdentifier) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const error = Math.random() < 0.3;
+            if (error) {
+              reject(`Error fetching ${dataIdentifier}`);
+            } else {
+              resolve(`data of ${dataIdentifier}`);
+            }
+          }, 4000);
+        });
+      }
+
+      console.log("fetching user");
+
+      async function fetchallData() {
+        const user = await fetchData("user");
+        console.log(user);
+
+        const posts = await fetchData("posts");
+        console.log(posts);
+
+        const likes = await fetchData("likes");
+        console.log(likes);
+
+        const commnets = await fetchData("comments");
+        console.log(commnets);
+      }
+
+      try {
+        (async function () {
+          const user = await fetchData("user");
+          console.log(user);
+
+          const posts = await fetchData("posts");
+          console.log(posts);
+
+          const likes = await fetchData("likes");
+          console.log(likes);
+
+          const commnets = await fetchData("comments");
+          console.log(commnets);
+        })();
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+  </body>
+</html>
