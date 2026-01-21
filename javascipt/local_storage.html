@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      localStorage.setItem("username", "b2rsp");
+      const username = localStorage.getItem("username");
+      console.log(username);
+
+      const person = {
+        name: "bidur",
+        age: 22,
+      };
+
+      localStorage.setItem("user", JSON.stringify(person));
+      const stringpersondetals = localStorage.getItem("user");
+
+      const parsedperson = JSON.parse(stringpersondetals);
+
+      console.log(parsedperson, parsedperson.name);
+    </script>
+  </body>
+</html>
