@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: blue;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button class="btn">Hide box</button>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+      //   const btn = document.querySelector("button");
+      //   btn.addEventListener("click", function () {
+      //     const box = document.querySelector(".box");
+      //     box.classList.add("hide");
+      //   });
+
+      $(".btn").click(function () {
+        $(".box").toggle(1000);
+      });
+
+      $(".box").text("new text contetn");
+
+      console.log($(".box").text());
+      $(".box").html("<h2>HEllo</h2>");
+      $(".box").append("<h2>HEllo1</h2>");
+      $(".box").prepend("<h2>HEllo2</h2>");
+
+      $(".box").addClass("hello");
+
+      $(".box").fadeOut(1000).delay(2000).fadeIn(1000);
+    </script>
+  </body>
+</html>
