@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% include "testapp/includes/header.html" %}
+    <h1>{{month_name}} challenge</h1>
+    {% if text is not None%}
+
+    <h2>{{text|title}}</h2>
+
+    {% else%}
+    <h2>not found</h2>
+    {% endif %}
+  </body>
+</html>
