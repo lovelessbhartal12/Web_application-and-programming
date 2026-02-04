@@ -1,0 +1,15 @@
+# Virtual environments
+myenv3/
+venv/
+env/
+.venv/
+.env13/
+env13/
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+
