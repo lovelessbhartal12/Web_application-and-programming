@@ -1,7 +1,12 @@
-{% extends 'base.html' %} {% block content %}
-<ul>
-  {% for month in months%}
-  <li><a href="{url 'monthly-challenge' month %}">{{month |title }}</a></li>
-  {% endfor %}
-</ul>
-{% endblock content%}
+<!doctype html>
+<html>
+  <head>
+    <title>Challenges</title>
+  </head>
+  <body>
+    <h1>Months</h1>
+    {% for month in months %}
+    <p>{{ month }}</p>
+    {% endfor %}
+  </body>
+</html>
