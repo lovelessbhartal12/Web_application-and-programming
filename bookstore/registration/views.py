@@ -14,9 +14,13 @@ def registration_form(request):
         form = RegistrationForm(request.POST)
 
         if form.is_valid():
+            data=form.cleaned_data
+            hashpass=make_password(data['password'])
+            regstration=Registration(name=data['name'] ,email=data['email'],password=hashpass)
+            regstration.save()
             print("sucess")
             return redirect('registration:form')
     else:
         form = RegistrationForm()
 
-    return render(request, 'registration/form.html', {'form': form})
+    return render(request, 'registration/form.html', {'form': RegistrationForm(), "success": "Registration successful!"})
