@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>jQuery Method Chaining Demo</title>
+
+    <script src="jquery-4.0.0.min.js"></script>
+
+    <style>
+      #box {
+        width: 200px;
+        height: 100px;
+        background-color: lightgray;
+        text-align: center;
+        line-height: 100px;
+        margin: 50px auto;
+        border-radius: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">Hello This is loblesh</div>
+    <button id="btn">Click Me</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("#box")
+            .css("background-color", "orange")
+            .css("color", "white")
+            .slideUp(1000)
+            .slideDown(1000)
+            .fadeOut(1000)
+            .fadeIn(1000);
+        });
+      });
+    </script>
+  </body>
+</html>

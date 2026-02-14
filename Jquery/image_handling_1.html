@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery image</title>
+    <style>
+      .container {
+        width: 300px;
+        margin: 50px auto;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img_12.png" alt="Sample Image" />
+      <p id="description">This is a beautiful sample image.</p></br>
+      <h2>Loblesh bhartal</h2>
+
+    </div>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("img").mouseenter(function () {
+          $("#description").text("You hovered over the image!");
+        });
+        $("img").mouseleave(function () {
+          $("#description").text("This is a beautiful sample image.");
+        });
+      });
+    </script>
+  </body>
+</html>

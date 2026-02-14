@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>jQuery Selectors Demo</title>
+    <script src="jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Welcome</h1>
+    <p class="text">home page</p>
+    <p class="text">Loblesh bhartal</p>
+    <input type="text" placeholder="Enter name" />
+
+    <script>
+      $(document).ready(function () {
+        $("#title").css("color", "blue");
+        $(".text").css("color", "green");
+        $("input[type='text']").css("border", "2px solid red");
+      });
+    </script>
+  </body>
+</html>
