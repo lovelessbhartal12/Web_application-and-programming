@@ -128,26 +128,38 @@
 
 // export default App;
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function LoginStatus() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+// function LoginStatus() {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+//   return (
+//     <div>
+//       <h2>
+//         {isLoggedIn ? "Welcome back !" : "Please log in loblesh bhartal file"}
+//       </h2>
+
+//       {isLoggedIn && <p>You have new messages</p>}
+
+//       {!isLoggedIn && <p>Log in to see your messages</p>}
+
+//       <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+//         {isLoggedIn ? "Logout" : "Login"}
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default LoginStatus;
+
+import RegistrationForm from "./Components/Registrationform";
+
+function App() {
   return (
     <div>
-      <h2>
-        {isLoggedIn ? "Welcome back !" : "Please log in loblesh bhartal file"}
-      </h2>
-
-      {isLoggedIn && <p>You have new messages</p>}
-
-      {!isLoggedIn && <p>Log in to see your messages</p>}
-
-      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
-        {isLoggedIn ? "Logout" : "Login"}
-      </button>
+      <RegistrationForm />
     </div>
   );
 }
 
-export default LoginStatus;
+export default App;
