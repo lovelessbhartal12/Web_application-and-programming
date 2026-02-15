@@ -175,13 +175,82 @@
 // }
 
 // export default App;
-import FetchUsers from "./Components/fetch_user";
+// import FetchUsers from "./Components/fetch_user";
+
+// function App() {
+//   return (
+//     <div>
+//       <FetchUsers />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import FocusInput from "./Components/focus_input";
+// function App() {
+//   return (
+//     <div>
+//       <FocusInput />
+//     </div>
+//   );
+// }
+
+// export default App;
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
+
+function Home() {
+  return <h2>welcome to lobless Home Page</h2>;
+}
+
+function About() {
+  return <h2>About loblesh</h2>;
+}
+
+function UserProfile() {
+  const { userId } = useParams();
+
+  return (
+    <div>
+      <h2>User Profile</h2>
+      <p>User ID: {userId}</p>
+    </div>
+  );
+}
+
+function Navigation() {
+  return (
+    <nav style={{ marginBottom: "20px" }}>
+      <Link to="/" style={{ marginRight: "10px" }}>
+        Home
+      </Link>
+      <Link to="/about" style={{ marginRight: "10px" }}>
+        About
+      </Link>
+      <Link to="/user/101">User 101</Link>
+    </nav>
+  );
+}
 
 function App() {
   return (
-    <div>
-      <FetchUsers />
-    </div>
+    <BrowserRouter>
+      <div style={{ textAlign: "center", marginTop: "40px" }}>
+        <Navigation />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/user/:userId" element={<UserProfile />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
