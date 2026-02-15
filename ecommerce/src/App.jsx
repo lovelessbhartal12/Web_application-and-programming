@@ -152,12 +152,35 @@
 
 // export default LoginStatus;
 
-import RegistrationForm from "./Components/Registrationform";
+// import RegistrationForm from "./Components/Registrationform";
+
+// function App() {
+//   return (
+//     <div>
+//       <RegistrationForm />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import WindowResizeListener from "./Components/window_size_listener";
+
+// function App() {
+//   return (
+//     <div>
+//       <WindowResizeListener />
+//     </div>
+//   );
+// }
+
+// export default App;
+import FetchUsers from "./Components/fetch_user";
 
 function App() {
   return (
     <div>
-      <RegistrationForm />
+      <FetchUsers />
     </div>
   );
 }
