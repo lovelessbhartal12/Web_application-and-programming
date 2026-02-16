@@ -197,60 +197,106 @@
 // }
 
 // export default App;
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+//   Link,
+//   useParams,
+// } from "react-router-dom";
 
-function Home() {
-  return <h2>welcome to lobless Home Page</h2>;
-}
+// function Home() {
+//   return <h2>welcome to lobless Home Page</h2>;
+// }
 
-function About() {
-  return <h2>About loblesh</h2>;
-}
+// function About() {
+//   return <h2>About loblesh</h2>;
+// }
 
-function UserProfile() {
-  const { userId } = useParams();
+// function UserProfile() {
+//   const { userId } = useParams();
 
-  return (
-    <div>
-      <h2>User Profile</h2>
-      <p>User ID: {userId}</p>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <h2>User Profile</h2>
+//       <p>User ID: {userId}</p>
+//     </div>
+//   );
+// }
 
-function Navigation() {
-  return (
-    <nav style={{ marginBottom: "20px" }}>
-      <Link to="/" style={{ marginRight: "10px" }}>
-        Home
-      </Link>
-      <Link to="/about" style={{ marginRight: "10px" }}>
-        About
-      </Link>
-      <Link to="/user/101">User 101</Link>
-    </nav>
-  );
-}
+// function Navigation() {
+//   return (
+//     <nav style={{ marginBottom: "20px" }}>
+//       <Link to="/" style={{ marginRight: "10px" }}>
+//         Home
+//       </Link>
+//       <Link to="/about" style={{ marginRight: "10px" }}>
+//         About
+//       </Link>
+//       <Link to="/user/101">User 101</Link>
+//     </nav>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <div style={{ textAlign: "center", marginTop: "40px" }}>
+//         <Navigation />
+
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//           <Route path="/user/:userId" element={<UserProfile />} />
+//         </Routes>
+//       </div>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+// App.jsx
+// import React from "react";
+// import Card from "./Components/card";
+
+// function App() {
+//   return (
+//     <div style={{ padding: "20px" }}>
+//       <h1>Card Component Example</h1>
+
+//       <Card>
+//         <p>This is a simple text paragraph inside the Card component.</p>
+//       </Card>
+
+//       <Card>
+//         <button onClick={() => alert("Button Clicked!")}>Click Me</button>
+//       </Card>
+
+//       <Card>
+//         <h3>Features</h3>
+//         <ul>
+//           <li>Reusable Component</li>
+//           <li>Uses Children Prop</li>
+//           <li>Clean UI Structure</li>
+//         </ul>
+//       </Card>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// App.jsx
+import React from "react";
+import Grandparent from "./Components/Grandparent";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div style={{ textAlign: "center", marginTop: "40px" }}>
-        <Navigation />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/user/:userId" element={<UserProfile />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div>
+      <h1>Props Drilling Example</h1>
+      <Grandparent />
+    </div>
   );
 }
 
