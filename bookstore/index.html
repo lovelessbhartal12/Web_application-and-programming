@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="#" onsubmit="handleSubmit(event)">
+            username:
+            <input type="text" name="username" />
+            <br>
+            <br>
+            password:
+            <input type="password" name="password" />
+            <br>
+            <br>
+            <button type="submit" id="login-button">Submit</button>
+        </form>
+        <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        document.body.innerHTML += "<h3 id='welcome'>Welcome, testuser</h3>";
+      }
+        </script>
+    </body>
+</html>
