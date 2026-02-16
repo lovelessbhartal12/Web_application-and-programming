@@ -7,6 +7,7 @@ from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.response import Response
 from .serializers import RegistrationSerializer
 from .models import Registration
+from rest_framework import status
 
 
 class RegistrationListAPIView(APIView):
@@ -18,3 +19,10 @@ class RegistrationListAPIView(APIView):
         serializer = RegistrationSerializer(registrations, many=True)
         return Response(serializer.data)
     
+    def post(self ,request):
+        serializer=RegistrationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Registration successful",
+                             "data": serializer.data}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors ,status=status.HTTP_400_BAD_REQUEST)
