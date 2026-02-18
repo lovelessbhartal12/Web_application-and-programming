@@ -24,6 +24,7 @@ urlpatterns = [
 
      path('session/', include('session.urls')),
      path('api/student/', include('student.urls')),
+     path('api/testjwt/', include('testjwt.urls')),
 
     
 ]
