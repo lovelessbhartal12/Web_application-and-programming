@@ -1,9 +1,10 @@
 from django.urls import path
 from . import views
-
 urlpatterns = [
     path('' , views.index, name='index' ),
     path('<int:month>/', views.monthly_challenge_by_number , name="monthly_challenge_by_number"),
-    path('<month>/', views.monthly_challenge, name='monthly-challenge')
+    path('<month>/', views.monthly_challenge, name='monthly-challenge'),
+    path('', views.login_view, name='login'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 
 ]

@@ -50,3 +50,27 @@ def monthly_challenge_by_number(request, month):
     # Using reverse with named URL
     redirect_url = reverse('monthly-challenge', args=[redirect_month])
     return HttpResponseRedirect(redirect_url)
+
+
+from django.shortcuts import render, redirect
+from .models import Student
+
+def login_view(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        try:
+            student = Student.objects.get(username=username, password=password)
+           
+            return redirect('dashboard')
+        except Student.DoesNotExist:
+            
+            return render(request, "login.html", {
+                "error": "Invalid username/password"
+            })
+
+    return render(request, "login.html")
+
+def dashboard(request):
+    return render(request, "dashboard.html")
